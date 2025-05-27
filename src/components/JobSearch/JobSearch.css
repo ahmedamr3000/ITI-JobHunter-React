@@ -1,0 +1,141 @@
+.jobSearch {
+  display: flex;
+  align-items: center;
+  border: 1px solid #4640de;
+  padding: 8px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 900px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+
+.jobSearch .searchIcon {
+  color: #828196;
+  font-size: 24px;
+  flex: 0 0 24px;
+}
+
+.jobSearch .searchInput {
+  flex: 1;
+  min-width: 100px;
+  position: relative;
+}
+
+.jobSearch input {
+  border: none;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 8px;
+  outline: none;
+  width: 100%;
+  background: transparent;
+  font-family: "ClashDisplay-Regular";
+}
+
+.jobSearch .searchInput::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  right: 0;
+  top: 0;
+  background-color: #dad8df;
+  width: 2px;
+}
+
+.jobSearch .selectCategories {
+  flex: 0.6;
+  min-width: 100px;
+}
+
+.jobSearch select {
+  color: #828196;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+  padding: 8px;
+  width: 100%;
+  font-family: "ClashDisplay-Regular";
+}
+
+.jobSearch button {
+  background-color: #4640de;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  flex: 0 0 auto;
+}
+
+.jobSearch button:hover {
+  background-color: #3630b3;
+}
+
+@media (max-width: 768px) {
+  .jobSearch {
+    padding: 6px;
+    gap: 6px;
+  }
+
+  .jobSearch .searchInput {
+    min-width: 80px;
+  }
+
+  .jobSearch .selectCategories {
+    min-width: 80px;
+  }
+
+  .jobSearch input,
+  .jobSearch select,
+  .jobSearch button {
+    font-size: 13px;
+    padding: 6px;
+  }
+
+  .jobSearch button {
+    padding: 6px 12px;
+  }
+
+  .jobSearch .searchIcon {
+    font-size: 20px;
+    flex: 0 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .jobSearch {
+    padding: 4px;
+    gap: 4px;
+  }
+
+  .jobSearch input,
+  .jobSearch select,
+  .jobSearch button {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  .jobSearch button {
+    padding: 5px 10px;
+  }
+
+  .jobSearch .searchInput {
+    min-width: 60px;
+  }
+
+  .jobSearch .selectCategories {
+    min-width: 60px;
+  }
+
+  .jobSearch .searchIcon {
+    font-size: 18px;
+    flex: 0 0 18px;
+  }
+}

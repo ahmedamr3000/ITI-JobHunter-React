@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,600;1,14..32,600&display=swap');
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F5F7FF;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 19px;
+    font-optical-sizing: auto;
+    font-style: normal;
+    
+}
+
+body {
+  font-family: 'ClashDisplay-Semibold', sans-serif;
+  letter-spacing: 2px;
+
+}
+
+a,button,input,select{
+font-family: 'ClashDisplay-Medium', sans-serif;
+letter-spacing: 2px;
+}

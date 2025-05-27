@@ -1,0 +1,89 @@
+.jobs .explore {
+  background-color: #fdfdfd;
+}
+
+.jobs .explore .container {
+  background-image: url(../../assets/Hero.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
+  height: 550px;
+}
+
+.jobs .exp {
+  color: #4640de;
+  font-size: 17px;
+  font-family: "ClashDisplay-Medium";
+}
+
+.jobs .emp {
+  color: #25324b;
+  font-size: 60px;
+  font-weight: 900;
+}
+
+@media (max-width: 768px) {
+  .jobs .emp {
+    font-size: 40px;
+  }
+  .jobs .explore .container {
+    background-image: none;
+  }
+}
+
+.jobs .desc {
+  color: #515b6f;
+  font-family: "ClashDisplay-Regular";
+  font-size: 16px;
+}
+
+.jobs .explore .popularSearch > p {
+  color: #25324b;
+  font-size: 15px;
+}
+
+.tags .searchTag {
+  font-size: 14px;
+  border: 1px solid #515b6f;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #515b6f;
+  background-color: #fff;
+  font-family: "ClashDisplay-Regular";
+}
+
+.jobs-area {
+  background-color: #f8f8fd;
+}
+
+.main-title {
+  color: #25324b;
+  position: relative;
+  z-index: 999;
+}
+
+.main-title span {
+  color: #26a4ff;
+}
+
+.jobs-area .job-card {
+  transition: 0.3s;
+}
+
+.jobs-area .job-card:hover {
+  box-shadow: 8px 8px 18.7px 0px #ccd4f299;
+}
+
+.jobs-area {
+  position: relative;
+}
+
+.jobs-area::before {
+  position: absolute;
+  content: "";
+  left: -70px;
+  top: -70px;
+  border: 70px solid;
+  border-color: transparent #ffffff transparent transparent;
+  transform: rotate(45deg);
+}

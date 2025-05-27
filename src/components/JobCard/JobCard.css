@@ -1,0 +1,37 @@
+.job-card .job-title {
+  font-size: 20px;
+  color: #25324b;
+}
+
+.jobs-area .job-card .info {
+  color: #515b6f;
+  font-size: 16px;
+  font-family: "ClashDisplay-Regular";
+  font-weight: 200;
+}
+
+.job-card .tags .type,
+.job-card .tags .status {
+  padding: 7px 15px;
+  border-radius: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-family: "ClashDisplay-Medium";
+  font-size: 14px;
+}
+
+.job-card .tags .type::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 2px;
+  background-color: #d6ddeb;
+  top: 0;
+  right: -10px;
+}
+
+.job-card .tags .status {
+  color: #4640de;
+  border: 1px solid #4640de;
+  padding: 7px 25px;
+}

@@ -1,0 +1,7 @@
+.MuiPaper-root {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.MuiPaper-root[style*="background-image"] {
+  background-repeat: no-repeat;
+}

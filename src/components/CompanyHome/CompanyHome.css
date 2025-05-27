@@ -1,0 +1,31 @@
+.company-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.company-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.company-card .card-title {
+  color: #212529;
+}
+
+.company-card .card-subtitle {
+  color: #6c757d;
+  font-family: "ClashDisplay-Medium", sans-serif;
+}
+
+.company-card .card-text {
+  color: #868e96;
+  font-family: "ClashDisplay-Medium", sans-serif;
+}
+
+.company-card button {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.company-card button:hover {
+  background-color: #3834b1;
+  transform: scale(1.02);
+}

@@ -3,7 +3,6 @@ import "./CompanyHome.css";
 import image from "../../assets/Artboard 1.svg";
 import useCompanyStore from "../../store/UseCompanyStore";
 import useUserStore from "../../store/User.store";
-import image2 from "../../assets/image-2.png";
 
 import {
   Box,

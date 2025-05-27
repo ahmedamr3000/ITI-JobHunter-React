@@ -3,7 +3,6 @@ import "./CompanyHome.css";
 import image from "../../assets/Artboard 1.svg";
 import useCompanyStore from "../../store/UseCompanyStore";
 import useUserStore from "../../store/User.store";
-import image2 from "../../assets/image-2.png";
 
 import {
   Box,
@@ -484,16 +483,6 @@ export default function CompanyHome() {
             </Typography>
           )}
         </div>
-
-        <div
-          className="banner my-5"
-          style={{
-            backgroundImage: `url(${image2})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            height: "300px",
-          }}
-        ></div>
       </div>
 
       <Modal

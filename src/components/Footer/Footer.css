@@ -1,0 +1,81 @@
+.app-footer {
+  /* تم تغيير الكلاس إلى app-footer */
+  background-color: #4640de;
+  /* يمكنك إضافة خلفية مائلة (الـ angles) هنا إذا كانت صورة SVG أو PNG شفافة */
+  /* background-image: url('../../assets/bg-pattern.svg'); */ /* تأكد من المسار الصحيح لصورة الخلفية */
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: contain;
+  padding: 60px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Container لتحديد عرض المحتوى */
+.footer-container {
+  /* تم تغيير الكلاس إلى footer-container */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 900px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 0 24px;
+  }
+}
+
+.footer-content {
+  /* تم تغيير الكلاس إلى footer-content */
+  margin-bottom: 30px;
+  flex: 1;
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  .footer-content {
+    text-align: left;
+    margin-right: 50px;
+    margin-bottom: 0;
+  }
+}
+
+.footer-form {
+  /* تم تغيير الكلاس إلى footer-form */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+@media (min-width: 600px) {
+  .footer-form {
+    flex-direction: row;
+    width: auto;
+  }
+}
+
+.footer-bottom-text {
+  /* تم تغيير الكلاس إلى footer-bottom-text */
+  margin-top: 40px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* يمكنك إضافة بعض الأنماط للـ input placeholder */
+.footer-form .MuiInputBase-input::placeholder {
+  color: #757575;
+  opacity: 1;
+}

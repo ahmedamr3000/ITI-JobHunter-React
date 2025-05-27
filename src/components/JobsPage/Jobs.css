@@ -87,3 +87,40 @@
   border-color: transparent #ffffff transparent transparent;
   transform: rotate(45deg);
 }
+
+.tags .searchTag {
+  font-size: 14px;
+  border: 1px solid #515b6f;
+  padding: 8px 15px;
+  border-radius: 5px;
+  color: #515b6f;
+  background-color: #fff;
+  font-family: "ClashDisplay-Regular";
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+  user-select: none;
+  display: inline-block;
+}
+
+.tags .searchTag:hover {
+  background-color: #4640de;
+  color: #fff;
+  border-color: #4640de;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tags .searchTag:active {
+  background-color: #3832b5;
+  color: #fff;
+  border-color: #3832b5;
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.jobs .explore .popularSearch > p {
+  color: #25324b;
+  font-size: 15px;
+  margin-bottom: 10px;
+}

@@ -18,10 +18,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import BusinessIcon from "@mui/icons-material/Business";
 import PeopleIcon from "@mui/icons-material/People";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
-import EventNoteIcon from "@mui/icons-material/EventNote";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 import "./CompanyDetails.css";
@@ -312,7 +309,7 @@ export default function CompanyDetails() {
         </Typography>
         {jobs.length > 0 ? (
           <Grid container spacing={3}>
-            {jobs.slice(0, 1).map((job) => (
+            {jobs.map((job) => (
               <Grid item xs={12} key={job._id}>
                 <Paper
                   sx={{
@@ -416,6 +413,24 @@ export default function CompanyDetails() {
                         day: "numeric",
                         year: "numeric",
                       })}
+                      <br />
+
+                      <Button
+                        variant="contained"
+                        component={Link}
+                        to={`/job/${job._id}`}
+                        sx={{
+                          bgcolor: "#1A75E8",
+                          color: "#fff",
+                          px: 4,
+                          py: 1,
+                          borderRadius: 1,
+                          width: { xs: "100%", sm: "auto" },
+                          "&:hover": { bgcolor: "#0F1137" },
+                        }}
+                      >
+                        {job.job_status}
+                      </Button>
                     </Typography>
                   </Box>
                 </Paper>

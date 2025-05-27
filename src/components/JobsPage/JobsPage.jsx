@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import useJobStore from "../../store/useJobsStore";
 import { Box, Pagination } from "@mui/material";
 
@@ -12,9 +12,39 @@ function JobsPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const jobsPerPage = 8;
 
+  const [displayedJobs, setDisplayedJobs] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+
   useEffect(() => {
     fetchJobs();
   }, [fetchJobs]);
+
+  useEffect(() => {
+    if (jobs && jobs.length > 0) {
+      const filtered = jobs.filter((job) => {
+        const jobTitle = job.title ? job.title.toLowerCase() : "";
+        const term = searchTerm.toLowerCase();
+        return jobTitle.includes(term);
+      });
+      setDisplayedJobs(filtered);
+    } else if (jobs && jobs.length === 0 && !loading) {
+      setDisplayedJobs([]);
+    }
+    setCurrentPage(1);
+  }, [jobs, searchTerm, loading]);
+
+  const handleSearchResults = useCallback((results) => {
+    setDisplayedJobs(results);
+    setCurrentPage(1);
+  }, []);
+
+  const handleSearchTermChange = useCallback((term) => {
+    setSearchTerm(term);
+  }, []);
+
+  const handlePopularSearchClick = useCallback((term) => {
+    setSearchTerm(term);
+  }, []);
 
   const getJobTypeBackgroundColor = (jobType) => {
     switch (jobType) {
@@ -27,23 +57,45 @@ function JobsPage() {
       case "Part Time":
         return "#FF9800";
       default:
+        return "#607D8B";
     }
   };
 
   const indexOfLastJob = currentPage * jobsPerPage;
   const indexOfFirstJob = indexOfLastJob - jobsPerPage;
-  const currentJobs = jobs.slice(indexOfFirstJob, indexOfLastJob);
+  const currentJobsOnPage = displayedJobs.slice(
+    indexOfFirstJob,
+    indexOfLastJob
+  );
 
-  const totalPages = Math.ceil(jobs.length / jobsPerPage);
+  const totalPages = Math.ceil(displayedJobs.length / jobsPerPage);
 
   const handlePageChange = (event, value) => {
     setCurrentPage(value);
   };
 
+  if (loading && displayedJobs.length === 0) {
+    return (
+      <div className="d-flex justify-content-center align-items-center vh-100">
+        <h1 className="text-center">Loading jobs...</h1>
+      </div>
+    );
+  }
+
+  if (error) {
+    return <p>Error: {error}</p>;
+  }
+
   return (
     <>
       <div className="jobs">
-        <JobsHero />
+        <JobsHero
+          onSearchResults={handleSearchResults}
+          allJobs={jobs}
+          searchTerm={searchTerm}
+          onSearchTermChange={handleSearchTermChange}
+          onPopularSearchClick={handlePopularSearchClick}
+        />
 
         <div className="jobs-area">
           <div className="container">
@@ -53,13 +105,21 @@ function JobsPage() {
 
             <div className="jobs pb-5">
               <div className="row g-4">
-                {currentJobs.map((job) => (
-                  <JobCard key={job._id} job={job} />
-                ))}
+                {currentJobsOnPage.length > 0 ? (
+                  currentJobsOnPage.map((job) => (
+                    <JobCard
+                      key={job._id}
+                      job={job}
+                      getJobTypeBackgroundColor={getJobTypeBackgroundColor}
+                    />
+                  ))
+                ) : (
+                  <p>No jobs found matching your criteria.</p>
+                )}
               </div>
 
               <div className="row">
-                {jobs.length > jobsPerPage && (
+                {displayedJobs.length > jobsPerPage && (
                   <Box
                     sx={{ display: "flex", justifyContent: "center", mt: 4 }}
                   >

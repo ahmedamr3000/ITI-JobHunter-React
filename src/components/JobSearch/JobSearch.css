@@ -35,16 +35,6 @@
   font-family: "ClashDisplay-Regular";
 }
 
-.jobSearch .searchInput::after {
-  position: absolute;
-  content: "";
-  height: 100%;
-  right: 0;
-  top: 0;
-  background-color: #dad8df;
-  width: 2px;
-}
-
 .jobSearch .selectCategories {
   flex: 0.6;
   min-width: 100px;

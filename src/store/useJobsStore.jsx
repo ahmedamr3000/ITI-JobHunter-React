@@ -16,7 +16,7 @@ const useJobStore = create((set) => ({
     }
     try {
       const response = await axios.get(
-        "https://iti-jobhunter-node-production-ccbd.up.railway.app/api/job/",
+        "https://iti-jobhunter-node-production-2ae5.up.railway.app/api/job/",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -41,7 +41,7 @@ const useJobStore = create((set) => ({
     }
     try {
       const response = await axios.get(
-        `https://iti-jobhunter-node-production-ccbd.up.railway.app/api/job/${jobId}`,
+        `https://iti-jobhunter-node-production-2ae5.up.railway.app/api/job/${jobId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

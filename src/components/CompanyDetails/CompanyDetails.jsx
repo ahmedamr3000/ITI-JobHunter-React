@@ -38,7 +38,7 @@ export default function CompanyDetails() {
         setError(null);
 
         const response = await axios.get(
-          `https://iti-jobhunter-node-production-ccbd.up.railway.app/api/companies/display/${id}`
+          `https://iti-jobhunter-node-production-2ae5.up.railway.app/api/companies/display/${id}`
         );
         setCompany(response.data.company);
         setJobs(response.data.jobs);

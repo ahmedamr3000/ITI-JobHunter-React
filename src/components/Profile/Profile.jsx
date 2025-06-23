@@ -205,7 +205,7 @@ const ProfilePage = () => {
       }
 
       const { data } = await axios.post(
-        "https://iti-jobhunter-node-production-ccbd.up.railway.app/api//resume",
+        "https://iti-jobhunter-node-production-2ae5.up.railway.app/api//resume",
         formData,
         {
           headers: {

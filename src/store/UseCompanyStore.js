@@ -14,7 +14,7 @@ const useCompanyStore = create((set) => ({
     }
     try {
       const res = await axios.get(
-        "https://iti-jobhunter-node-production-ccbd.up.railway.app/api/companies/display",
+        "https://iti-jobhunter-node-production-2ae5.up.railway.app/api/companies/display",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -36,7 +36,7 @@ const useCompanyStore = create((set) => ({
     }
     try {
       const res = axios.get(
-        `https://iti-jobhunter-node-production-ccbd.up.railway.app/api/companies/display/${id}`,
+        `https://iti-jobhunter-node-production-2ae5.up.railway.app/api/companies/display/${id}`,
         {
           headers: {
             Authorization: `Bearer${token}`,

@@ -104,7 +104,7 @@ function JobDetailsPage() {
         token = sessionStorage.getItem("UserToken");
       }
       const response = await axios.post(
-        `https://iti-jobhunter-node-production-ccbd.up.railway.app/api/application/${selectedJob._id}`,
+        `https://iti-jobhunter-node-production-2ae5.up.railway.app/api/application/${selectedJob._id}`,
         payload,
         {
           headers: {

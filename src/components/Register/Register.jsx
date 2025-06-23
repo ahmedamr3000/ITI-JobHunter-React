@@ -72,7 +72,7 @@ export default function Register() {
       setApiError(null);
       setEmailExists(false);
       let response = await axios.post(
-        "https://iti-jobhunter-node-production-ccbd.up.railway.app/api/auth/signUp",
+        "https://iti-jobhunter-node-production-2ae5.up.railway.app/api/auth/signUp",
         values
       );
       if (response.status === 200) {

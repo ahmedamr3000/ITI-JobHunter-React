@@ -115,7 +115,7 @@ export default function CompanyHome() {
         token = sessionStorage.getItem("UserToken");
       }
       const response = await axios.post(
-        "https://iti-jobhunter-node-production-ccbd.up.railway.app/api/companies/register",
+        "https://iti-jobhunter-node-production-2ae5.up.railway.app/api/companies/register",
         newCompanyData,
         {
           headers: {
@@ -171,7 +171,7 @@ export default function CompanyHome() {
         token = sessionStorage.getItem("UserToken");
       }
       const response = await axios.delete(
-        `https://iti-jobhunter-node-production-ccbd.up.railway.app/api/companies/delete/${companyToDeleteId}`,
+        `https://iti-jobhunter-node-production-2ae5.up.railway.app/api/companies/delete/${companyToDeleteId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -260,7 +260,7 @@ export default function CompanyHome() {
         token = sessionStorage.getItem("UserToken");
       }
       const response = await axios.put(
-        `https://iti-jobhunter-node-production-ccbd.up.railway.app/api/companies/update/${companyToEdit._id}`,
+        `https://iti-jobhunter-node-production-2ae5.up.railway.app/api/companies/update/${companyToEdit._id}`,
         editCompanyData,
         {
           headers: {

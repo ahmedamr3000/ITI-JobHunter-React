@@ -19,7 +19,7 @@ const useUserStore = create((set) => ({
     try {
       const decodedToken = jwtDecode(token);
       const { data } = await axios.get(
-        `https://iti-jobhunter-node-production-ccbd.up.railway.app/api/user/${decodedToken.id}`,
+        `https://iti-jobhunter-node-production-2ae5.up.railway.app/api/user/${decodedToken.id}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -78,7 +78,7 @@ const useUserStore = create((set) => ({
       decodedToken = jwtDecode(token);
 
       const response = await axios.put(
-        `https://iti-jobhunter-node-production-ccbd.up.railway.app/api/user/${decodedToken.id}`,
+        `https://iti-jobhunter-node-production-2ae5.up.railway.app/api/user/${decodedToken.id}`,
         dataToUpdate,
         {
           headers: {
@@ -136,7 +136,7 @@ const useUserStore = create((set) => ({
 
     try {
       const { data } = await axios.delete(
-        `https://iti-jobhunter-node-production-ccbd.up.railway.app/api/user/${decodedToken.id}`,
+        `https://iti-jobhunter-node-production-2ae5.up.railway.app/api/user/${decodedToken.id}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
